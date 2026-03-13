@@ -3,8 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    {path: '/login', component: () => import('@/views/login/loginPage.vue')},
-    {path: '/', component: () => import('@/views/layout/layoutContainer.vue'),
+    {path: '/login', component: () => import('@/views/login/LoginPage.vue')},
+    {path: '/', component: () => import('@/views/layout/LayoutContainer.vue'),
       redirect: '/article/manage',//默认跳转
       children:[
         //文章管理
