@@ -93,7 +93,7 @@ watch(isRegister, () => {
     <el-col :span="6" :offset="3" class="form">
       <el-form ref="form" size="large" autocomplete="off" v-if="isRegister" :model="ruleForm" :rules="rules">
         <el-form-item>
-          <h1>注册</h1>
+          <h1>Sign up</h1>
         </el-form-item>
         <el-form-item prop="username">
           <el-input 
@@ -119,19 +119,19 @@ watch(isRegister, () => {
           ></el-input>
         </el-form-item>
         <el-form-item>
-          <el-button @click="register" class="button" type="primary" auto-insert-space>
+          <el-button @click="register" class="button" type="info" auto-insert-space>
             注册
           </el-button>
         </el-form-item>
         <el-form-item class="flex">
-          <el-link type="info" underline="never" @click="isRegister = false">
-            ← 返回
+          <el-link type="success" underline="never" @click="isRegister = false">
+            返回登录
           </el-link>
         </el-form-item>
       </el-form>
       <el-form ref="form" size="large" autocomplete="off" v-else :model="ruleForm" :rules="rules">
         <el-form-item>
-          <h1>登录</h1>
+          <h1>Sign in</h1>
         </el-form-item>
         <el-form-item prop="username">
           <el-input v-model="ruleForm.username" :prefix-icon="User" placeholder="请输入用户名"></el-input>
@@ -149,16 +149,16 @@ watch(isRegister, () => {
         <el-form-item class="flex">
           <div class="flex">
             <el-checkbox>记住我</el-checkbox>
-            <el-link type="primary" underline="never">忘记密码？</el-link>
+            <el-link type="success" underline="never">忘记密码？</el-link>
           </div>
         </el-form-item>
         <el-form-item>
-          <el-button @click="login" class="button" type="primary" auto-insert-space>登录</el-button
+          <el-button @click="login" class="button" type="info" auto-insert-space>登录</el-button
           >
         </el-form-item>
         <el-form-item class="flex">
-          <el-link type="info" underline="never" @click="isRegister = true">
-            注册 →
+          <el-link type="success" underline="never" @click="isRegister = true">
+            注册 
           </el-link>
         </el-form-item>
       </el-form>
@@ -186,10 +186,16 @@ watch(isRegister, () => {
     .button {
       width: 100%;
     }
+    .button:hover {
+        background-color: #7285AB;
+      }
     .flex {
       width: 100%;
       display: flex;
       justify-content: space-between;
+    }
+    h1{
+      color: gray;
     }
   }
 }

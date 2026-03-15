@@ -16,7 +16,7 @@ instance.interceptors.request.use(
     // TODO 2. 携带token
     const userStore = useUserStore()
     if (userStore.token) {
-      config.headers.Authorization = `Bearer ${userStore.token}`//作用：将token放到请求头中，以便服务器进行身份验证
+      config.headers.Authorization = userStore.token//作用：将token放到请求头中，以便服务器进行身份验证
     }
     return config
   },

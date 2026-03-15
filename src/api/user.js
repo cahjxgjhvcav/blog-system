@@ -14,3 +14,7 @@ export const userLoginService =({ username, password }) => {
         password
     })
 }
+// 获取用户信息
+export const getUserInfoService = () => {
+    return request.get('https://big-event-vue-api-t.itheima.net/my/userinfo')
+}
