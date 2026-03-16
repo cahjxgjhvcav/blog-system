@@ -79,7 +79,7 @@ const onCommand = async (command) => {
     </el-aside>
     <el-container>
       <el-header>
-        <div>欢迎回来，用户<strong>{{ userStore.user.nickname || userStore.user.username }}</strong></div>
+        <div>欢迎回来，<strong>{{ userStore.user.nickname || userStore.user.username }}</strong></div>
         <el-dropdown placement="bottom-end" @command="onCommand">
           <span class="el-dropdown__box">
             <el-avatar :src="userStore.user.user_pic || avatar" />
