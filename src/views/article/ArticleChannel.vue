@@ -22,14 +22,18 @@ const onEditChannel = (row) => {
 }
 // 删除文章分类
 const onDelChannel = async (row) => {
-  await ElMessageBox.confirm('你确认删除该分类信息吗？', '温馨提示', {
+  try {
+    await ElMessageBox.confirm('你确认删除该分类信息吗？', '温馨提示', {
     type: 'warning',
     confirmButtonText: '确认',
     cancelButtonText: '取消'
   })
   await artDelChannelService(row.id)//删除接口，需要传id
   ElMessage({ type: 'success', message: '删除成功' })
-  getChannelList()
+  getChannelList()//重新获取列表
+  }catch (err) {
+    console.log(err)
+  }
 }
 // 添加文章分类
 const onAddChannel = () => {
