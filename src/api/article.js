@@ -16,3 +16,7 @@ export const artDelChannelService = (id) =>
   request.delete('https://big-event-vue-api-t.itheima.net/my/cate/del', {
     params: { id }
   })
+  //文章
+  //获取文章列表，需要传递参数
+  export const artGetListService = (params) =>
+    request.get('/my/article/list', { params })
