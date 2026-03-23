@@ -171,8 +171,8 @@ watch(isRegister, () => {
   height: 100vh;
   background-color: #fff;
   .bg {
-    background: url('@/assets/logo2.png') no-repeat 60% top / 240px auto,
-      url('@/assets/001.webp') no-repeat center / cover;
+    background: 
+      url('@/assets/logo777.png') no-repeat center / cover;
     border-radius: 0 20px 20px 0;
   }
   .form {

@@ -44,7 +44,7 @@ const onCommand = async (command) => {
       <div class="el-aside__logo"></div>
       <el-menu
         active-text-color="#ffd04b"
-        background-color="#232323"
+        background-color="#090A06"
         :default-active="$route.path"
         text-color="#fff"
         router
@@ -106,7 +106,7 @@ const onCommand = async (command) => {
       <el-main>
         <router-view></router-view>
       </el-main>
-      <el-footer>大事件 ©2023 Created by 黑马程序员</el-footer>
+      <el-footer>管理系统 @2025 Created by me</el-footer>
     </el-container>
   </el-container>
 </template>
@@ -115,10 +115,10 @@ const onCommand = async (command) => {
 .layout-container {
   height: 100vh;
   .el-aside {
-    background-color: #232323;
+    background-color: #090A06;
     &__logo {
-      height: 120px;
-      background: url('@/assets/logo.png') no-repeat center / 120px auto;
+      height: 200px;
+      background: url('@/assets/logo000.png') no-repeat center / 290px auto;
     }
     .el-menu {
       border-right: none;
